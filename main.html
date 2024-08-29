@@ -9,15 +9,20 @@
     <select id="colorSelect">
         <option value="red">Red</option>
         <option value="green">Green</option>
-        <option value="blue">Blue</option>
+        <option value="white">White</option>
+        <option value="black">Black</option>
     </select>
-    <button id="removeColorButton">Remove Color</button>
-<script type="text/javascript" src="./script.js">
-		</script>
-
+    <input type="button" value="Select and Remove" onclick="removeSelectedColor()">
+    
+    <script>
+        function removeSelectedColor() {
+            const colorSelect = document.getElementById("colorSelect");
+            const selectedColor = colorSelect.value;
+            const optionToRemove = colorSelect.querySelector(`[value="${selectedColor}"]`);
+            if (optionToRemove) {
+                colorSelect.removeChild(optionToRemove);
+            }
+        }
+    </script>
 </body>
-</html>
-		
-	</body>
-
 </html>
