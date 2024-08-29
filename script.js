@@ -1,6 +1,8 @@
-//your JS code here. If required.
-//your JS code here. If required.
-function removeCol(){
-	let x = document.getElementById("colorSelect");
-	x.remove(x.selectedIndex)
-}
+const removeColorButton = document.getElementById("removeColorButton");
+        const colorSelect = document.getElementById("colorSelect");
+
+        removeColorButton.addEventListener("click", () => {
+            const selectedColor = colorSelect.value;
+            // Remove the selected color (you can implement this logic)
+            // Update the UI (re-render the dropdown list)
+        });
